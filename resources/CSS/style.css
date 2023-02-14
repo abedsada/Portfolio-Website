@@ -1,0 +1,142 @@
+html{
+    color: aliceblue;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    height: 100%;
+    background-color: rgb(57, 53, 53);
+}
+
+li a{
+    text-decoration: none;
+}
+
+/*Header*/
+header{
+    position: fixed;
+    width:100%;
+    background-color: rgb(7, 17, 37);
+    top: -0px;
+    z-index:10;
+}
+#Slogo{
+    display: block;
+    color: #4FA9DB;
+    font-weight: bolder;
+    font-size: 23px;
+    text-decoration: none;
+}
+#Slogo span{
+    color: #FFC375;
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+header .content{
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 5%;    
+}
+nav {
+    list-style-type: none;
+    font-size: 18px;
+  }
+nav li{
+    display: inline-block;
+    margin: 0 10px;
+}
+nav li a{
+    color:aliceblue;
+}
+
+nav li a:hover{
+    color:rgb(149, 160, 169);
+}
+#menu1{
+    display: none;
+}
+#menu2{
+    display: none;
+}
+
+/*Header breakpoints*/
+@media only screen and (max-width: 768px){
+    header .content{
+        justify-content: space-around;
+        padding:0 1%;   
+    }
+    nav li{
+        font-size:14px
+    }
+    #Slogo span{
+        display: none;
+    }
+    #Slogo{
+        font-size: 20px;
+    }    
+}
+
+@media only screen and (max-width: 600px){
+    #Slogo{
+        font-size: 23px;
+    }  
+    nav li{
+        display: none;
+    }
+    header .content{
+        justify-content: space-between;
+        align-items: center;
+        padding:0 5%;   
+    }
+    .menu{
+        align-items: center;
+        height: 80%;
+        padding: auto;
+    }
+    .menu img{
+        max-height: 60%;
+        width: auto;
+    }  
+    #menu1{
+        display: flex;
+    }
+ 
+}
+
+/*Home*/
+.page{
+    height: 100vh;
+    z-index: 0;
+}
+.A{
+    background-color: red;
+}
+.B{
+    background-color: blue;
+}
+.C{
+    background-color: yellow;
+}
+#menuContainet{
+    display: none;
+    background-color: purple;
+    z-index: 5;
+    width: 50%;
+    position: fixed;
+    right: -50%;
+    transition: 750ms right ease-in 100ms;
+}
+
+#menuContainet .content{
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 600px){
+    #menuContainet{
+        display: flex;
+    }
+}
