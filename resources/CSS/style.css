@@ -1,5 +1,4 @@
 html{
-    color: aliceblue;
     font-family: "Roboto", sans-serif;
     font-size: 16px;
     height: 100%;
@@ -9,45 +8,46 @@ html{
 li a{
     text-decoration: none;
 }
+.page{
+    height: 100vh;
+    z-index: 0;
+}
 
 /*Header*/
 header{
     position: fixed;
     width:100%;
-    background-color: rgb(7, 17, 37);
+    background-color: whitesmoke;
     top: -0px;
     z-index:10;
 }
 #Slogo{
     display: block;
-    color: #4FA9DB;
-    font-weight: bolder;
-    font-size: 23px;
+    font-size: 18px;
     text-decoration: none;
-}
-#Slogo span{
-    color: #FFC375;
-    font-weight: lighter;
-    font-size: 16px;
+    color: black;
+    font-family: "Roboto";
 }
 
 header .content{
-    height: 65px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:0 5%;    
+    padding:2% 5%;
+    box-shadow: 0 -4px 8px 3px rgba(0,0,0,0.5);
+    
 }
 nav {
     list-style-type: none;
-    font-size: 18px;
   }
 nav li{
     display: inline-block;
     margin: 0 10px;
+    font-family: "Roboto";
+    font-size: 16px;
 }
 nav li a{
-    color:aliceblue;
+    color: black;
 }
 
 nav li a:hover{
@@ -61,41 +61,33 @@ nav li a:hover{
 }
 
 /*Header breakpoints*/
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 768px){ 
     header .content{
-        justify-content: space-around;
-        padding:0 1%;   
+        justify-content: space-between;
+        align-items: center;
+        padding:2% 1.5%;   
     }
     nav li{
-        font-size:14px
-    }
-    #Slogo span{
-        display: none;
-    }
-    #Slogo{
-        font-size: 20px;
-    }    
+        font-size: 14px;
+      } 
+      
 }
 
-@media only screen and (max-width: 600px){
-    #Slogo{
-        font-size: 23px;
-    }  
+@media only screen and (max-width: 640px){ 
     nav li{
         display: none;
     }
     header .content{
         justify-content: space-between;
         align-items: center;
-        padding:0 5%;   
+        padding:2% 8%;   
     }
     .menu{
         align-items: center;
-        height: 80%;
         padding: auto;
     }
     .menu img{
-        max-height: 60%;
+        max-height: 2rem;
         width: auto;
     }  
     #menu1{
@@ -105,13 +97,56 @@ nav li a:hover{
 }
 
 /*Home*/
-.page{
-    height: 100vh;
-    z-index: 0;
-}
 .A{
-    background-color: red;
+    background-color: whitesmoke;
+    display: grid;
+    grid-template: 1fr/ 1fr 1fr;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    padding: 0 8%;
 }
+
+.text{
+    grid-area: 1fr/1fr/1fr/1fr;
+    font-family: "Sriracha";
+    width: 90%;
+}
+.text h1{
+    font-size: 38px;
+    padding-bottom: 3%;
+}
+.text h2{
+    font-size: 24px;
+    padding-bottom: 5%;
+}
+.text p{
+    font-size: 18px;    
+}
+.icon{
+    margin-top: 20px;
+}
+.icon img{
+    display: inline-block;
+    max-width: 40px;
+    margin-right: 4%;
+}
+
+
+.imgContainer{
+    grid-area: 1fr/2fr/1fr/2fr;
+    z-index: 5;
+}
+#myPic{
+    width: 400px;
+    height: 60%;
+    background-image: url('../Pictures/pic2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(230, 255, 85);
+    border-radius: 50%;
+}
+
 .B{
     background-color: blue;
 }
