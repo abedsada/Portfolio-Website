@@ -108,7 +108,7 @@ nav li a:hover{
 }
 
 /*Home*/
-.A{
+.Home{
     background-color: whitesmoke;
     display: grid;
     grid-template: 1fr/ 1.5fr 1fr;
@@ -169,7 +169,7 @@ nav li a:hover{
 /*Home breakpoints*/
 
 @media screen  and (max-width: 1126px){
-    .A{
+    .Home{
         padding: 0 6%;
         grid-template: 1fr/ 2fr 1fr;
     }
@@ -184,7 +184,7 @@ nav li a:hover{
     } 
 }
 @media screen  and (max-width: 800px){
-    .A{
+    .Home{
         grid-template: 1fr 1.1fr / 1fr;
         padding: 0%;
     }
@@ -217,7 +217,7 @@ nav li a:hover{
     }
 }
 @media screen  and (max-width: 480px){
-    .A{
+    .Home{
         grid-template: 1fr 1fr / 1fr;
         gap: 0%
     }
@@ -232,7 +232,6 @@ nav li a:hover{
         width: 200px;
         height: 80%;
     }
-
     .text h1{
         font-size: 26px;
         padding-bottom: 3%;
