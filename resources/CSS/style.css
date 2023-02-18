@@ -5,7 +5,7 @@ html{
     background-color: rgb(57, 53, 53);
 }
 
-li a{
+a{
     text-decoration: none;
 }
 .page{
@@ -27,6 +27,17 @@ header{
     text-decoration: none;
     color: black;
     font-family: "Roboto";
+}
+
+#Slogo:hover {
+    animation: hithere 1s ease infinite;
+  }
+@keyframes hithere {
+    30% { transform: scale(1.2); }
+    40%, 60% { transform: rotate(-20deg) scale(1.2); }
+    50% { transform: rotate(20deg) scale(1.2); }
+    70% { transform: rotate(0deg) scale(1.2); }
+    100% { transform: scale(1); }
 }
 
 header .content{
@@ -80,7 +91,7 @@ nav li a:hover{
     header .content{
         justify-content: space-between;
         align-items: center;
-        padding:2% 8%;   
+        padding: 1% 8%;   
     }
     .menu{
         align-items: center;
@@ -100,7 +111,7 @@ nav li a:hover{
 .A{
     background-color: whitesmoke;
     display: grid;
-    grid-template: 1fr/ 1fr 1fr;
+    grid-template: 1fr/ 1.5fr 1fr;
     align-content: center;
     align-items: center;
     justify-items: center;
@@ -110,21 +121,21 @@ nav li a:hover{
 .text{
     grid-area: 1fr/1fr/1fr/1fr;
     font-family: "Sriracha";
-    width: 90%;
+    width: 80%;
 }
 .text h1{
     font-size: 38px;
     padding-bottom: 3%;
 }
 .text h2{
-    font-size: 24px;
-    padding-bottom: 5%;
+    font-size: 26px;
+    padding-bottom: 6%;
 }
 .text p{
-    font-size: 18px;    
+    font-size: 19px;    
 }
 .icon{
-    margin-top: 20px;
+    margin-top: 8%;
 }
 .icon img{
     display: inline-block;
@@ -132,20 +143,114 @@ nav li a:hover{
     margin-right: 4%;
 }
 
+.icon img:hover{
+    animation: bounce2 1s ease infinite;
+  }
+@keyframes bounce2 {
+      0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+      40% {transform: translateY(-12px);}
+      60% {transform: translateY(-7px);}
+}
 
 .imgContainer{
     grid-area: 1fr/2fr/1fr/2fr;
-    z-index: 5;
+    z-index: 5;    
 }
 #myPic{
-    width: 400px;
-    height: 60%;
-    background-image: url('../Pictures/pic2.png');
+    width: 250px;
+    height: 50%;
+    background-image: url('../Pictures/pic.png');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     background-color: rgb(230, 255, 85);
     border-radius: 50%;
 }
+/*Home breakpoints*/
+
+@media screen  and (max-width: 1126px){
+    .A{
+        padding: 0 6%;
+        grid-template: 1fr/ 2fr 1fr;
+    }
+    #lastName{
+        display: none;
+    }
+    .text h2{
+        font-size: 22px;
+    }
+    .text p{
+        font-size: 18px;    
+    } 
+}
+@media screen  and (max-width: 800px){
+    .A{
+        grid-template: 1fr 1.1fr / 1fr;
+        padding: 0%;
+    }
+    #lastName{
+        display: inline;
+    }
+    .imgContainer{
+        grid-area:  1/1/span 1/span 1;
+        align-self: end;
+    }
+    #myPic{
+        margin-top: 40%;
+        width: 200px;
+        height: 80%;
+    }
+    .text{
+        grid-area: 2/1/span 1/span 1;
+        align-self: center;
+        text-align: center;
+    }
+    .text h1{
+        font-size: 30px;
+        padding-bottom: 2%;
+    }
+    .text h2{
+        padding-bottom: 4%;
+    }
+    .icon{
+        margin-top: 4%;
+    }
+}
+@media screen  and (max-width: 480px){
+    .A{
+        grid-template: 1fr 1fr / 1fr;
+        gap: 0%
+    }
+    #lastName{
+        display: none;
+    }
+    .imgContainer{
+        grid-area:  1/1/span 1/span 1;
+    }
+    #myPic{
+        margin-top: 40%;
+        width: 200px;
+        height: 80%;
+    }
+
+    .text h1{
+        font-size: 26px;
+        padding-bottom: 3%;
+    }
+    .text h2{
+        font-size: 20px;
+        padding-bottom: 5%;
+    }
+    .text p{
+        font-size: 14px;    
+    }
+    .icon{
+        margin-top: 6%;
+    }
+    
+}
+
+
 
 .B{
     background-color: blue;
@@ -173,5 +278,6 @@ nav li a:hover{
 @media only screen and (max-width: 600px){
     #menuContainet{
         display: flex;
+        z-index: 8;
     }
 }
