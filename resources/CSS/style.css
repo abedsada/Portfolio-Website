@@ -158,7 +158,7 @@ nav li a:hover{
 }
 #myPic{
     width: 250px;
-    height: 50%;
+    height: 40%;
     background-image: url('../Pictures/pic.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -250,13 +250,67 @@ nav li a:hover{
 }
 
 
-
 .B{
     background-color: blue;
 }
-.C{
-    background-color: yellow;
+
+/*Education*/
+#Education{
+    background-color: whitesmoke;
+    display: grid;
+    grid-template:1fr 3fr/1fr;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
 }
+.SubTitle{
+    grid-area: 1/1/span 1/span 1;
+    font-size: 36px;
+}
+#psut{
+    grid-area: 2/1/span 1/span 1;
+    background-color: rgb(250, 250, 250);
+    border-radius: 6%;
+    padding: 2%;
+    box-shadow: 0 6px 10px 0px rgba(0,0,0,0.5);
+    text-align: left;
+    width: 80%;
+    display: grid;
+    grid-template:1fr/1fr 4fr;
+    gap: 3%;
+}
+#psut .text{
+    grid-area: 1/2/span 1/span 1;
+    width: 100%;
+}
+#psut h3{
+    font-size: 34px;
+    color:#0c2c73;
+}
+#psut h4{
+    font-size: 28px;
+    padding: 1% 0;
+    color:#2a477a;
+}
+
+#psut h5{
+    font-size: 20px;
+    color: rgb(56, 54, 54);
+    padding-bottom:2%;
+}
+#psut li{
+    font-size: 16px;
+    padding-bottom: 1%;
+}
+#psut .pic{
+    grid-area: 1/1/span 1/span 1;
+    background-image: url(../Pictures/psut.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+/*Menu Containet*/
 #menuContainet{
     display: none;
     background-color: purple;
