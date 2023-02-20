@@ -398,8 +398,8 @@ nav li a:hover{
     background-size: contain;
 }
 
-.arrow{
-
+#arrow1, #arrow3{
+    display: none;
 }
 
 /*Menu Containet*/
