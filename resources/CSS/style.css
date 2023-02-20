@@ -3,6 +3,7 @@ html{
     font-size: 16px;
     height: 100%;
     background-color: rgb(57, 53, 53);
+    box-sizing: border-box;
 }
 
 a{
@@ -257,27 +258,35 @@ nav li a:hover{
 /*Education*/
 #Education{
     background-color: whitesmoke;
-    display: grid;
-    grid-template:1fr 3fr/1fr;
-    justify-content: center;
-    justify-items: center;
-    align-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
+    height: 80vh;   
+    box-sizing: border-box;
 }
 .SubTitle{
-    grid-area: 1/1/span 1/span 1;
-    font-size: 36px;
+    font-size: 40px;
+    font-family: "Roboto";
+    font-weight: bold;
+    color:#301f7b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.SubTitle img{
+    width: 15%;
+}
+
 #psut{
-    grid-area: 2/1/span 1/span 1;
     background-color: rgb(250, 250, 250);
     border-radius: 6%;
     padding: 2%;
     box-shadow: 0 6px 10px 0px rgba(0,0,0,0.5);
     text-align: left;
-    width: 80%;
+    width: 70%;
     display: grid;
-    grid-template:1fr/1fr 4fr;
+    grid-template:1.5fr/1fr 3fr;
     gap: 3%;
 }
 #psut .text{
@@ -289,7 +298,7 @@ nav li a:hover{
     color:#0c2c73;
 }
 #psut h4{
-    font-size: 28px;
+    font-size: 26px;
     padding: 1% 0;
     color:#2a477a;
 }
@@ -302,6 +311,9 @@ nav li a:hover{
 #psut li{
     font-size: 16px;
     padding-bottom: 1%;
+    font-family: "Arial";
+    list-style-type: square;
+    margin-left: 3%;
 }
 #psut .pic{
     grid-area: 1/1/span 1/span 1;
@@ -310,6 +322,86 @@ nav li a:hover{
     background-position: center;
     background-size: contain;
 }
+#psut .pic:hover{
+	backface-visibility: visible !important;
+	animation: flip 2s ease infinite;
+}
+@keyframes flip {
+	0% {
+		transform: perspective(400px) rotateY(0);
+		animation-timing-function: ease-out;
+	}
+	40% {
+		transform: perspective(400px) translateZ(100px) rotateY(170deg);
+		animation-timing-function: ease-out;
+	}
+	50% {
+		transform: perspective(400px) translateZ(100px) rotateY(190deg) scale(1);
+		animation-timing-function: ease-in;
+	}
+	80% {
+		transform: perspective(400px) rotateY(360deg) scale(.95);
+		animation-timing-function: ease-in;
+	}
+	100% {
+		transform: perspective(400px) scale(1);
+		animation-timing-function: ease-in;
+	}
+}
+
+#codecademy{
+    background-color: rgb(250, 250, 250);
+    border-radius: 6%;
+    padding: 2%;
+    box-shadow: 0 6px 10px 0px rgba(0,0,0,0.5);
+    text-align: left;
+    width: 70%;
+    display: none;
+    grid-template:1.5fr/1fr 3fr;
+    gap: 3%;
+}
+#codecademy .text{
+    grid-area: 1/2/span 1/span 1;
+    width: 100%;
+}
+#codecademy h3{
+    font-size: 34px;
+    color:#0c2c73;
+}
+#codecademy h4{
+    font-size: 26px;
+    padding: 1% 0;
+    color:#2a477a;
+}
+#codecademy h5{
+    font-size: 20px;
+    color: rgb(56, 54, 54);
+    padding-bottom:2%;
+}
+#codecademy h6{
+    font-size: 18px;
+    padding-bottom:2%;
+    font-family: "Arial";
+}
+#codecademy li{
+    font-size: 15px;
+    padding-bottom: 1%;
+    font-family: "Arial";
+    list-style-type: square;
+    margin-left: 3%;
+}
+#codecademy .pic{
+    grid-area: 1/1/span 1/span 1;
+    background-image: url(../Pictures/codecademy2.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.arrow{
+
+}
+
 /*Menu Containet*/
 #menuContainet{
     display: none;
