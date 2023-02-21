@@ -46,8 +46,7 @@ header .content{
     justify-content: space-between;
     align-items: center;
     padding:2% 5%;
-    box-shadow: 0 -4px 8px 3px rgba(0,0,0,0.5);
-    
+    box-shadow: 0 -4px 8px 3px rgba(0,0,0,0.5);   
 }
 nav {
     list-style-type: none;
@@ -73,7 +72,7 @@ nav li a:hover{
 }
 
 /*Header breakpoints*/
-@media only screen and (max-width: 768px){ 
+@media only screen and (max-width: 900px){ 
     header .content{
         justify-content: space-between;
         align-items: center;
@@ -110,19 +109,32 @@ nav li a:hover{
 
 /*Home*/
 .Home{
-    background-color: whitesmoke;
+    background-image: url(../Pictures/cover3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0 8%;
+    display: grid;
+    align-items: center;
+    justify-items: center;    
+}
+.Home .content{
     display: grid;
     grid-template: 1fr/ 1.5fr 1fr;
     align-content: center;
     align-items: center;
     justify-items: center;
-    padding: 0 8%;
+    background-color: rgba(245, 245, 245,0.8);
+    border-radius: 4%;
+    padding: 40px 20px;
+
 }
 
 .text{
     grid-area: 1fr/1fr/1fr/1fr;
     font-family: "Sriracha";
     width: 80%;
+    border-radius: 5%;
+    padding: 3%;
 }
 .text h1{
     font-size: 38px;
@@ -159,21 +171,20 @@ nav li a:hover{
 }
 #myPic{
     width: 250px;
-    height: 40%;
+    height: 100%;
     background-image: url('../Pictures/pic.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-color: whitesmoke;
     background-color: rgb(230, 255, 85);
-    border-radius: 50%;
+    /*background-color: rgb(164, 89, 248);*/
+    border-radius: 40%;
 }
 /*Home breakpoints*/
 
-@media screen  and (max-width: 1126px){
-    .Home{
-        padding: 0 6%;
-        grid-template: 1fr/ 2fr 1fr;
-    }
+@media screen  and (max-width: 1175px){
+
     #lastName{
         display: none;
     }
@@ -184,10 +195,16 @@ nav li a:hover{
         font-size: 18px;    
     } 
 }
-@media screen  and (max-width: 800px){
+@media screen  and (max-width: 955px){
     .Home{
-        grid-template: 1fr 1.1fr / 1fr;
-        padding: 0%;
+        overflow: auto;
+    }
+    .Home .content{
+        grid-template: 1fr 1fr / 1fr;
+        gap: 0%;
+        margin-top:8%;
+        padding:5% 0;
+        height: 80%;
     }
     #lastName{
         display: inline;
@@ -197,9 +214,8 @@ nav li a:hover{
         align-self: end;
     }
     #myPic{
-        margin-top: 40%;
-        width: 200px;
-        height: 80%;
+        max-width: 250px;
+        height: 100%;
     }
     .text{
         grid-area: 2/1/span 1/span 1;
@@ -207,7 +223,7 @@ nav li a:hover{
         text-align: center;
     }
     .text h1{
-        font-size: 30px;
+        font-size: 36px;
         padding-bottom: 2%;
     }
     .text h2{
@@ -217,21 +233,12 @@ nav li a:hover{
         margin-top: 4%;
     }
 }
-@media screen  and (max-width: 480px){
-    .Home{
-        grid-template: 1fr 1fr / 1fr;
-        gap: 0%
-    }
+@media screen  and (max-width: 500px){
     #lastName{
         display: none;
     }
     .imgContainer{
         grid-area:  1/1/span 1/span 1;
-    }
-    #myPic{
-        margin-top: 40%;
-        width: 200px;
-        height: 80%;
     }
     .text h1{
         font-size: 26px;
@@ -247,9 +254,11 @@ nav li a:hover{
     .icon{
         margin-top: 6%;
     }
-    
+    #myPic{
+        max-width: 200px;
+        height: 90%;
+    }
 }
-
 
 .B{
     background-color: blue;
@@ -426,3 +435,6 @@ nav li a:hover{
         z-index: 8;
     }
 }
+
+
+/*Experience*/

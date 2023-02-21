@@ -6,8 +6,8 @@ let arr3=document.getElementById("arrow3");
 let arr4=document.getElementById("arrow4");
 let psut=document.getElementById("psut");
 let CodeCademy=document.getElementById("CodeCademy");
-
 let menuContent=document.getElementById("menuContainet");
+
 function slide(){
     menuButton1.style.display='none';
     menuButton2.style.display='flex';
@@ -27,7 +27,7 @@ arr4.addEventListener('click',()=>{
     arr2.style.display='none';
     arr3.style.display='inline-block';
     arr4.style.display='none';
-    psut.style.display='none';
+    psut.style.display='none'
     CodeCademy.style.display='grid';
 });
 
