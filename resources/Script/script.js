@@ -7,6 +7,8 @@ let arr4=document.getElementById("arrow4");
 let psut=document.getElementById("psut");
 let CodeCademy=document.getElementById("CodeCademy");
 let menuContent=document.getElementById("menuContainet");
+let home=document.getElementById("Home");
+
 
 function slide(){
     menuButton1.style.display='none';
@@ -17,6 +19,11 @@ function deslide(){
     menuButton1.style.display='flex';
     menuButton2.style.display='none';
     menuContent.style.right='-50%';
+}
+function nextBackground(){
+    let url = "url('./resources/Pictures/cover" + (Math.floor(Math.random() * 3) + 1) + ".jpg')";
+    home.style.backgroundImage=url;
+    setTimeout(nextBackground, 8000);
 }
 
 menuButton1.addEventListener('click',slide);
@@ -39,3 +46,5 @@ arr1.addEventListener('click',()=>{
     psut.style.display='grid';
     CodeCademy.style.display='none';
 });
+
+setTimeout(nextBackground, 8000);
