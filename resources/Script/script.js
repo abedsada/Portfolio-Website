@@ -1,6 +1,10 @@
 //Declaring elements for DOM work!
 let menuButton1=document.getElementById("menu1");
 let menuButton2=document.getElementById("menu2");
+
+let ExperienceHeaderButton=document.getElementById("ExperienceHeaderButton");
+let EducationHeaderButton=document.getElementById("EducationHeaderButton");
+
 let arr1=document.getElementById("arrow1");
 let arr2=document.getElementById("arrow2");
 let arr3=document.getElementById("arrow3");
@@ -72,6 +76,29 @@ function leftArray(){
         rem.style.display='none';
     }
 }
+function ExperienceScreenOpener(){
+    ExperienceButton.style.color='#3F3763';
+    ExperienceButton.getElementsByTagName('img')[0].src="./resources/Pictures/work2.svg"
+    EducationButton.style.color='#301f7b';    
+    EducationButton.getElementsByTagName('img')[0].src="./resources/Pictures/edu1.svg"
+    ExperienceEducation=1;
+
+    EducationScreen.style.display='none';
+    ExperienceScreen.style.display='flex';
+    leftArray();
+}
+function EducationScreenOpener(){
+    EducationButton.style.color='#3F3763';
+    EducationButton.getElementsByTagName('img')[0].src="./resources/Pictures/edu2.svg"
+    ExperienceButton.style.color='#301f7b';    
+    ExperienceButton.getElementsByTagName('img')[0].src="./resources/Pictures/work1.svg"
+    ExperienceEducation=0;
+
+    ExperienceScreen.style.display='none';
+    EducationScreen.style.display='flex';
+    leftArray();
+}
+
 
 setTimeout(nextBackground, 8000);
 
@@ -84,26 +111,9 @@ arr4.addEventListener('click',rightArray);
 
 arr1.addEventListener('click',leftArray);
 
-ExperienceButton.addEventListener('click',()=>{
-    ExperienceButton.style.color='#3F3763';
-    ExperienceButton.getElementsByTagName('img')[0].src="./resources/Pictures/work2.svg"
-    EducationButton.style.color='#301f7b';    
-    EducationButton.getElementsByTagName('img')[0].src="./resources/Pictures/edu1.svg"
-    ExperienceEducation=1;
+ExperienceButton.addEventListener('click',ExperienceScreenOpener);
+ExperienceHeaderButton.addEventListener('click',ExperienceScreenOpener);
 
-    EducationScreen.style.display='none';
-    ExperienceScreen.style.display='flex';
-    leftArray();
-});
 
-EducationButton.addEventListener('click',()=>{
-    EducationButton.style.color='#3F3763';
-    EducationButton.getElementsByTagName('img')[0].src="./resources/Pictures/edu2.svg"
-    ExperienceButton.style.color='#301f7b';    
-    ExperienceButton.getElementsByTagName('img')[0].src="./resources/Pictures/work1.svg"
-    ExperienceEducation=0;
-
-    ExperienceScreen.style.display='none';
-    EducationScreen.style.display='flex';
-    leftArray();
-});
+EducationButton.addEventListener('click',EducationScreenOpener);
+EducationHeaderButton.addEventListener('click',EducationScreenOpener);

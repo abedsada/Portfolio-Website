@@ -262,12 +262,12 @@ nav li a:hover{
 
 
 /*Education*/
-#EducationWork{
+#EducationExperience{
     background-color: whitesmoke;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 #Title{
@@ -276,7 +276,7 @@ nav li a:hover{
 }
 
 .SubTitle{
-    font-size: 40px;
+    font-size: 38px;
     font-family: "Roboto";
     font-weight: bold;
     color:#301f7b;
@@ -303,7 +303,7 @@ nav li a:hover{
     align-items: center;
 }
 
-.dd{
+.infoWindow{
     background-color: rgb(250, 250, 250);
     border-radius: 6%;
     padding: 2%;
@@ -311,40 +311,60 @@ nav li a:hover{
     text-align: left;
     width: 70%;
     display: grid;
-    grid-template:1.5fr/1fr 3fr;
+    grid-template:1.5fr/0.8fr 3fr;
     gap: 3%;
+    margin: 4%;
 }
-.dd .text{
+.infoWindow .text{
     grid-area: 1/2/span 1/span 1;
     width: 100%;
 }
-.dd h3{
+.infoWindow h3{
     font-size: 34px;
     color:#0c2c73;
+    text-align: left;
+
 }
-.dd h4{
+.infoWindow h4{
     font-size: 26px;
     padding: 1% 0;
     color:#2a477a;
+    text-align: left;
+
 }
-.dd h5{
-    font-size: 20px;
+.infoWindow h5{
+    font-size: 18px;
     color: rgb(56, 54, 54);
     padding-bottom:2%;
+    text-align: left;
+
 }
-.dd li{
+.infoWindow h6{
+    font-size: 18px;
+    padding-bottom:2%;
+    font-family: "Arial";
+    text-align: left;
+
+}
+.infoWindow li{
     font-size: 16px;
     padding-bottom: 1%;
     font-family: "Arial";
     list-style-type: square;
     margin-left: 3%;
+    text-align: left;
 }
-#psut .pic{
+.infoWindow .pic{
     grid-area: 1/1/span 1/span 1;
-    background-image: url(../Pictures/psut.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+}
+#shortPSUT{
+    display: none;
+}
+#psut .pic{
+    background-image: url(../Pictures/psut.png);
 }
 #psut .pic:hover{
 	backface-visibility: visible !important;
@@ -384,17 +404,9 @@ nav li a:hover{
     grid-template:1.5fr/1fr 3fr;
     gap: 3%;
 }
-.dd h6{
-    font-size: 18px;
-    padding-bottom:2%;
-    font-family: "Arial";
-}
 #codecademy .pic{
-    grid-area: 1/1/span 1/span 1;
     background-image: url(../Pictures/codecademy2.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    max-width:80%;
 }
 
 #Experience{
@@ -409,10 +421,91 @@ nav li a:hover{
 #REM{
     display: none;
 }
+#REM .pic{
+    background-image: url(../Pictures/REM.png);
+    max-width:80%;
+}
 
+#OMCO .pic{
+    background-image: url(../Pictures/APCO2.png);
+    max-width:90%;
+}
+
+
+#REM li, #OMCO li{
+    font-size: 14px;
+}
+
+
+#arrowSpace{
+    display: flex;
+    justify-content: center;
+}
+.arrow{
+    max-width: 30%;
+    margin: 2%;   
+}
 #arrow1, #arrow3{
     display: none;
 }
+
+@media only screen and (max-width: 970px){
+    #REM li, #OMCO li{
+        font-size: 12px;
+    }
+    #REM ul,#OMCO ul{
+        display: none;
+    }
+    #REM h3 span{
+        display: none;
+    }
+    .infoWindow h3{
+        font-size: 30px;  
+    }
+    .infoWindow h6{
+        display: none;  
+    }
+    .infoWindow li{
+        font-size: 14px;
+    }
+    #shortPSUT{
+        display: inline-block;
+    }
+    #longPSUT{
+        display: none;
+    }
+    #EducationExperience{
+        height: auto;
+    }
+    .SubTitle{
+        font-size: 32px;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .infoWindow ul{
+        display: none;
+    }
+    .SubTitle{
+        font-size: 26px;
+    }
+    .infoWindow h3{
+        font-size: 24px;  
+    }
+    .infoWindow h4{
+        font-size: 20px;  
+    }
+    .infoWindow h5{
+        font-size: 18px;  
+    }
+}
+
+@media only screen and (max-width: 420px){
+    .SubTitle img{
+        display: none;
+    }
+}
+
 
 /*Menu Containet*/
 #menuContainet{
