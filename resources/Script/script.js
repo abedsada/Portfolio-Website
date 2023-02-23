@@ -49,13 +49,13 @@ function rightArray(){
     arr4.style.display='none';
 
     if(!ExperienceEducation){
-        psut.style.display='none'
+        psut.style.display='none';
         CodeCademy.style.display='grid';
     }
     else{
-        psut.style.display='none'
+        psut.style.display='none';
         CodeCademy.style.display='none';
-        omco.style.display='none'
+        omco.style.display='none';
         rem.style.display='grid';
     }
 }
@@ -70,9 +70,9 @@ function leftArray(){
         CodeCademy.style.display='none';
     }
     else{
-        psut.style.display='none'
+        psut.style.display='none';
         CodeCademy.style.display='none';
-        omco.style.display='grid'
+        omco.style.display='grid';
         rem.style.display='none';
     }
 }
