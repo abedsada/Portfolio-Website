@@ -1,4 +1,3 @@
-//Declaring elements for DOM work!
 let menuButton1=document.getElementById("menu1");
 let menuButton2=document.getElementById("menu2");
 
