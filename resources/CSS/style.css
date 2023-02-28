@@ -171,14 +171,13 @@ nav li a:hover{
 }
 #myPic{
     width: 250px;
-    height: 100%;
+    height: 280;
     background-image: url('../Pictures/pic.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-color: whitesmoke;
     background-color: rgb(230, 255, 85);
-    /*background-color: rgb(164, 89, 248);*/
     border-radius: 40%;
 }
 /*Home breakpoints*/
@@ -214,8 +213,8 @@ nav li a:hover{
         align-self: end;
     }
     #myPic{
-        max-width: 250px;
-        height: 100%;
+        max-width: 220px;
+        height: 250px;
     }
     .text{
         grid-area: 2/1/span 1/span 1;
@@ -256,7 +255,7 @@ nav li a:hover{
     }
     #myPic{
         max-width: 200px;
-        height: 90%;
+        height: 250px;
     }
 }
 
