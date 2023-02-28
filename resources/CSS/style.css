@@ -64,12 +64,6 @@ nav li a{
 nav li a:hover{
     color:rgb(149, 160, 169);
 }
-#menu1{
-    display: none;
-}
-#menu2{
-    display: none;
-}
 
 /*Header breakpoints*/
 @media only screen and (max-width: 900px){ 
@@ -104,7 +98,16 @@ nav li a:hover{
     #menu1{
         display: flex;
     }
- 
+    #menu2{
+        display: none;
+    }
+
+}
+@media only screen and (min-width: 640px){ 
+    #menu1, #menu2, #menuContainet{
+        display: none !important;
+    }
+
 }
 
 /*Home*/
@@ -524,7 +527,7 @@ nav li a:hover{
     align-items: center;
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 640px){
     #menuContainet{
         display: flex;
         z-index: 8;
