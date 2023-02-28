@@ -512,20 +512,44 @@ nav li a:hover{
 /*Menu Containet*/
 #menuContainet{
     display: none;
-    background-color: purple;
+    background-color: rgb(235, 235, 235);
     z-index: 5;
     width: 50%;
     position: fixed;
     right: -50%;
-    transition: 750ms right ease-in 100ms;
+    transition: 350ms right ease-in 100ms;
+    text-transform: uppercase;
 }
 
 #menuContainet .content{
+    width: 100%;
     display: flex;
     font-size: 20px;
-    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 250;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+    padding-top: 36%;
+    padding-bottom: 14%;
 }
+#menuContainet a{
+    width: 80%;
+    text-align: center;
+    color: #393535;
+}
+#menuContainet a:after {
+    display:block;
+    content: '';
+    padding-bottom: 3%;
+    border-bottom: 0.5px solid #575050;
+    transform: scaleX(1);  
+    transition: transform 250ms ease-in-out;
+  }
+  #menuContainet a:hover::after,#menuContainet a:active::after{
+    transform: scaleX(0);  
+  }
+
 
 @media only screen and (max-width: 640px){
     #menuContainet{
