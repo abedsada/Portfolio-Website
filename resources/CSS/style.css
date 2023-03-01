@@ -573,6 +573,7 @@ nav li a:hover{
     justify-content: space-evenly;
     align-items: center;
     background-color: #6A8572;
+    overflow-y: auto;
 }
 
 #title{
@@ -647,7 +648,6 @@ nav li a:hover{
 }
 .topic h4{
     font-size: 16px;
-    background-color: #CAD19F;
 
     justify-content: center;
     align-items: center;
@@ -681,7 +681,12 @@ nav li a:hover{
     }
 }
 @media  only screen and (max-width:890px) {
+    #Skills{
+        height: auto;
+        padding: 10% 0;
+    }
     #Skills .content{
+        padding-top: 15%;
         width: 90%;
         display: grid;
         grid-template: repeat(3,1fr)/repeat(2, 1fr);
