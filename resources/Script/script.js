@@ -26,6 +26,8 @@ let EducationScreen=document.getElementById("Education");
 let ExperienceScreen=document.getElementById("Experience");
 
 
+
+
 function slide(){
     menuButton1.style.display='none';
     menuButton2.style.display='flex';
@@ -116,3 +118,80 @@ ExperienceHeaderButton.addEventListener('click',ExperienceScreenOpener);
 
 EducationButton.addEventListener('click',EducationScreenOpener);
 EducationHeaderButton.addEventListener('click',EducationScreenOpener);
+
+
+let jsSkill=document.getElementById("JS");
+let cssSkill=document.getElementById("CSS");
+let htmlSkill=document.getElementById("html");
+let gitSkill=document.getElementById("GitVCS");
+let reactSkill=document.getElementById("React");
+let reduxSkill=document.getElementById("Redux");
+
+jsSkill.addEventListener("mouseover", () => {
+    jsSkill.style.gridTemplate="60% 10%/1fr";
+    jsSkill.getElementsByTagName("ul")[0].style.bottom='-100%';
+
+});
+jsSkill.addEventListener("mouseout", () => {
+    jsSkill.style.gridTemplate="2fr 1fr 3fr/1fr";
+    jsSkill.getElementsByTagName("ul")[0].style.bottom='0%';
+
+});
+
+
+cssSkill.addEventListener("mouseover", () => {
+    cssSkill.style.gridTemplate="60% 10%/1fr";
+    cssSkill.getElementsByTagName("ul")[0].style.bottom='-100%';
+
+});
+cssSkill.addEventListener("mouseout", () => {
+    cssSkill.style.gridTemplate="2fr 1fr 3fr/1fr";
+    cssSkill.getElementsByTagName("ul")[0].style.bottom='0%';
+
+});
+
+
+htmlSkill.addEventListener("mouseover", () => {
+    htmlSkill.style.gridTemplate="60% 10%/1fr";
+    htmlSkill.getElementsByTagName("ul")[0].style.bottom='-100%';
+
+});
+htmlSkill.addEventListener("mouseout", () => {
+    htmlSkill.style.gridTemplate="2fr 1fr 3fr/1fr";
+    htmlSkill.getElementsByTagName("ul")[0].style.bottom='0%';
+
+});
+
+
+gitSkill.addEventListener("mouseover", () => {
+    gitSkill.style.gridTemplate="60% 10%/1fr";
+    gitSkill.getElementsByTagName("ul")[0].style.bottom='-100%';
+
+});
+gitSkill.addEventListener("mouseout", () => {
+    gitSkill.style.gridTemplate="2fr 1fr 3fr/1fr";
+    gitSkill.getElementsByTagName("ul")[0].style.bottom='0%';
+
+});
+
+reactSkill.addEventListener("mouseover", () => {
+    reactSkill.style.gridTemplate="60% 10%/1fr";
+    reactSkill.getElementsByTagName("ul")[0].style.bottom='-100%';
+
+});
+reactSkill.addEventListener("mouseout", () => {
+    reactSkill.style.gridTemplate="2fr 1fr 3fr/1fr";
+    reactSkill.getElementsByTagName("ul")[0].style.bottom='0%';
+
+});
+
+reduxSkill.addEventListener("mouseover", () => {
+    reduxSkill.style.gridTemplate="60% 10%/1fr";
+    reduxSkill.getElementsByTagName("ul")[0].style.bottom='-100%';
+
+});
+reduxSkill.addEventListener("mouseout", () => {
+    reduxSkill.style.gridTemplate="2fr 1fr 3fr/1fr";
+    reduxSkill.getElementsByTagName("ul")[0].style.bottom='0%';
+
+});
