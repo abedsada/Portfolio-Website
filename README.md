@@ -30,4 +30,4 @@ For this project, you will build a personal portfolio site, a static website whe
 * This is an Off-Platform Project which was created using Visual Studio Code and Chrome DevTools.
 * https://unsplash.com was the main resource for the images.
 
-You can see the project thorugh this link: (the site is under construction)
+You can see the project thorugh this link:https://abedsada.github.io/Portfolio-Website/ (the site is under construction)
