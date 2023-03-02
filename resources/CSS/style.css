@@ -626,7 +626,7 @@ nav li a:hover{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    background-color: #602BA6;
+    background-color: #393535;
     overflow-y: auto;
 }
 
@@ -686,7 +686,7 @@ nav li a:hover{
     padding-left: 20%;
     padding-right: 5%;
 
-    background-color: #F2ED33;
+    background-color: rgba(242, 237, 51,0.7);
     border-radius: 20px;
     font-size: 15px;
     font-weight: lighter;
