@@ -10,8 +10,7 @@ a{
     text-decoration: none;
 }
 .page{
-    height: 100vh;
-    z-index: 0;
+    height: 100%;
 }
 
 /*Header*/
@@ -265,11 +264,12 @@ nav li a:hover{
 
 /*Education*/
 #EducationExperience{
+    height: 100%;
     background-color: whitesmoke;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 #Title{
@@ -312,13 +312,23 @@ nav li a:hover{
     box-shadow: 0 6px 10px 0px rgba(0,0,0,0.5);
     text-align: left;
     width: 70%;
+
     display: grid;
     grid-template:1.5fr/0.8fr 3fr;
     gap: 3%;
+
     margin: 4%;
 }
+.infoWindow .pic{
+    grid-area: 1/1/1/1;
+    align-self: center;
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+}
+
 .infoWindow .text{
-    grid-area: 1/2/span 1/span 1;
+    grid-area: 1/2/1/2;
     width: 100%;
 }
 .infoWindow h3{
@@ -356,17 +366,12 @@ nav li a:hover{
     margin-left: 3%;
     text-align: left;
 }
-.infoWindow .pic{
-    grid-area: 1/1/span 1/span 1;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+.infoWindow .pic img{
+    max-width:90%;
 }
+
 #shortPSUT{
     display: none;
-}
-#psut .pic{
-    background-image: url(../Pictures/psut.png);
 }
 #psut .pic:hover{
 	backface-visibility: visible !important;
@@ -406,10 +411,6 @@ nav li a:hover{
     grid-template:1.5fr/1fr 3fr;
     gap: 3%;
 }
-#codecademy .pic{
-    background-image: url(../Pictures/codecademy2.svg);
-    max-width:80%;
-}
 
 #Experience{
     width: 100%;
@@ -423,16 +424,6 @@ nav li a:hover{
 #REM{
     display: none;
 }
-#REM .pic{
-    background-image: url(../Pictures/REM.png);
-    max-width:80%;
-}
-
-#OMCO .pic{
-    background-image: url(../Pictures/APCO2.png);
-    max-width:90%;
-}
-
 
 #REM li, #OMCO li{
     font-size: 14px;
@@ -455,20 +446,8 @@ nav li a:hover{
     #REM li, #OMCO li{
         font-size: 12px;
     }
-    #REM ul,#OMCO ul{
-        display: none;
-    }
     #REM h3 span{
         display: none;
-    }
-    .infoWindow h3{
-        font-size: 30px;  
-    }
-    .infoWindow h6{
-        display: none;  
-    }
-    .infoWindow li{
-        font-size: 14px;
     }
     #shortPSUT{
         display: inline-block;
@@ -476,8 +455,18 @@ nav li a:hover{
     #longPSUT{
         display: none;
     }
+
+
+    .infoWindow h3{
+        font-size: 30px;  
+    }
+
+    .infoWindow li{
+        font-size: 14px;
+    }
+
     #EducationExperience{
-        height: auto;
+        height: 100%;
     }
     .SubTitle{
         font-size: 32px;
@@ -485,26 +474,91 @@ nav li a:hover{
 }
 
 @media only screen and (max-width: 600px){
-    .infoWindow ul{
-        display: none;
+    #EducationExperience{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        overflow: scroll;
     }
     .SubTitle{
         font-size: 26px;
     }
+
+    .infoWindow{
+        grid-template:30% 65%/1fr !important;
+        justify-items: center;
+        align-items: center;
+        max-height: 350px;
+        gap: 1%;
+        margin: 0%;
+    }
+
+    .infoWindow .pic{
+        grid-area: 1/1/1/1 !important;
+        max-height: 90%;
+
+    }
+    .infoWindow .pic img{
+        width: 100px;
+    }
+
+    .infoWindow .text{
+        grid-area: 2/1/2/1 !important;
+        width: 100%;
+        max-height: 100%;
+        /*
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;*/
+        display: grid;
+        grid-template: 1fr 1fr 1fr 5fr/1fr !important;
+        justify-items: center;
+        align-items: center;
+
+        text-align: center !important;
+        overflow-y: scroll;
+    }
+
     .infoWindow h3{
+        grid-area: 1/1/1/1 !important;;
         font-size: 24px;  
     }
     .infoWindow h4{
-        font-size: 20px;  
+        grid-area: 2/1/2/1 !important;;
+        font-size: 20px; 
+        text-align: center !important;
     }
     .infoWindow h5{
+        grid-area: 3/1/3/1 !important;
         font-size: 18px;  
+    }
+    .infoWindow ul{
+        grid-area: 4/1/4/1 !important;
+        font-size: 12px !important;
+        overflow-y: scroll !important;
+        overflow-x: hidden;
+        margin-top: 2%;
+        width: 100%;
+        max-height: 100%;
+    }
+
+    .infoWindow li{
+        margin:0 3%;
+        position: relative;
+        left: 5px;
     }
 }
 
 @media only screen and (max-width: 420px){
     .SubTitle img{
         display: none;
+    }
+    .infoWindow li{
+        margin:0 3%;
+        position: relative;
+        left: 10px;
     }
 }
 
@@ -572,7 +626,7 @@ nav li a:hover{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    background-color: #6A8572;
+    background-color: #602BA6;
     overflow-y: auto;
 }
 
@@ -593,7 +647,6 @@ nav li a:hover{
     align-items: center;
     align-content: center;
 }
-
 .topic{
     background-color: whitesmoke;
     
@@ -614,8 +667,8 @@ nav li a:hover{
     grid-area: 1/1/1/1;
     padding-top: 2%;
 }
-
 .topic h3{
+    color: #393535;
     font-size: 25px;
     text-align: center;
     font-size: bolder;
@@ -633,7 +686,7 @@ nav li a:hover{
     padding-left: 20%;
     padding-right: 5%;
 
-    background-color: rgb(244, 253, 193);
+    background-color: #F2ED33;
     border-radius: 20px;
     font-size: 15px;
     font-weight: lighter;
@@ -683,6 +736,7 @@ nav li a:hover{
 @media  only screen and (max-width:890px) {
     #Skills{
         height: auto;
+        min-height: 100vh;
         padding: 10% 0;
     }
     #Skills .content{
