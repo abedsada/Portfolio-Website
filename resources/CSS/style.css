@@ -297,6 +297,8 @@ nav li a:hover{
     padding: 0 10px;
 }
 
+
+
 #Education{
     width: 100%;
     display: flex;
@@ -318,6 +320,7 @@ nav li a:hover{
     gap: 3%;
 
     margin: 4%;
+
 }
 .infoWindow .pic{
     grid-area: 1/1/1/1;
@@ -631,11 +634,20 @@ nav li a:hover{
 }
 
 #title{
-    font-size: 35px;
+    font-size: 38px;
     text-align: center;
     color: whitesmoke;
     font-size: bolder;
     font-family: 'Open Sans', sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#title img{
+    width: 30px;
+    padding: 0 10px;
 }
 
 #Skills .content{
@@ -661,6 +673,7 @@ nav li a:hover{
     height: 250px;
     
     overflow: hidden;
+
 }
 .topic img{
     max-width: 80px;
