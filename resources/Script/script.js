@@ -198,10 +198,18 @@ reduxSkill.addEventListener("mouseout", () => {
 
 
 
-// User Location greeting
-fetch('https://ipapi.co/json/')
-.then(function(response) {
-  response.json().then(jsonData => {
-    document.getElementById('locationCity').innerHTML=jsonData.city+'!';
-  });
-});
+// User Location greeting using Async await with fetch
+
+async function LocationLocator(){
+    try{
+        let response=await fetch('https://ipapi.co/json/');
+        const jsonResponse = await response.json();
+        document.getElementById('locationCity').innerHTML=jsonResponse.city+'!';
+    }
+    catch{
+        console.log("Unable to read your location but it's okay!")
+    }
+}
+
+LocationLocator();
+
