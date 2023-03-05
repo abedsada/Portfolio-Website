@@ -195,3 +195,13 @@ reduxSkill.addEventListener("mouseout", () => {
     reduxSkill.getElementsByTagName("ul")[0].style.bottom='0%';
 
 });
+
+
+
+// User Location greeting
+fetch('https://ipapi.co/json/')
+.then(function(response) {
+  response.json().then(jsonData => {
+    document.getElementById('locationCity').innerHTML=jsonData.city+'!';
+  });
+});

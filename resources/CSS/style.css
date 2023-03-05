@@ -137,6 +137,7 @@ nav li a:hover{
     width: 80%;
     border-radius: 5%;
     padding: 3%;
+    color: black;
 }
 .text h1{
     font-size: 38px;
@@ -149,8 +150,21 @@ nav li a:hover{
 .text p{
     font-size: 19px;    
 }
+
+.text #location{
+    color: rgba(0, 0, 0,0.8);
+    margin-top: 3%;
+    font-size: 16px;
+    font-weight: lighter;
+}
+#location span{
+    color: rgba(137, 161, 0,0.8);
+    font-weight: bold;
+}
+
 .icon{
-    margin-top: 8%;
+    /*margin-top: 8%;*/
+    margin-top: 4%;
 }
 .icon img{
     display: inline-block;
@@ -194,6 +208,9 @@ nav li a:hover{
     }
     .text p{
         font-size: 18px;    
+    }
+    .text #location{
+        font-size: 14px;
     } 
 }
 @media screen  and (max-width: 955px){
@@ -230,9 +247,6 @@ nav li a:hover{
     .text h2{
         padding-bottom: 4%;
     }
-    .icon{
-        margin-top: 4%;
-    }
 }
 @media screen  and (max-width: 500px){
     #lastName{
@@ -252,8 +266,8 @@ nav li a:hover{
     .text p{
         font-size: 14px;    
     }
-    .icon{
-        margin-top: 6%;
+    .text #location{
+        font-size: 10px;
     }
     #myPic{
         max-width: 200px;
