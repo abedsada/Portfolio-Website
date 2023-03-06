@@ -578,6 +578,32 @@ nav li a:hover{
         left: 10px;
     }
 }
+@media only screen and (max-height: 600px) and (orientation:landscape){
+    #EducationExperience{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        overflow: scroll;
+        height: auto;
+        padding: 10%;
+    }
+    #Title{
+        padding: 5%;
+    }
+
+    .infoWindow{
+        margin: 5%;
+    }
+    #arrowSpace{
+        padding: 5%;
+    }
+
+    #Skills{
+        overflow-y: scroll;
+        padding: 10% 0;
+    }
+}
 
 
 /*Menu Containet*/
@@ -853,6 +879,9 @@ footer .content{
     justify-content: flex-start;
     align-items: center;
     padding: 2.5% 0;
+}
+.titlePic a{
+    color: #E6D5D5 !important;
 }
 .titlePic img{
     display: inline;

@@ -1,8 +1,13 @@
 let menuButton1=document.getElementById("menu1");
 let menuButton2=document.getElementById("menu2");
 
+
 let ExperienceHeaderButton=document.getElementById("ExperienceHeaderButton");
 let EducationHeaderButton=document.getElementById("EducationHeaderButton");
+
+let ExperienceHeaderButton2=document.getElementById("ExperienceHeaderButton2");
+let EducationHeaderButton2=document.getElementById("EducationHeaderButton2");
+
 
 let arr1=document.getElementById("arrow1");
 let arr2=document.getElementById("arrow2");
@@ -112,12 +117,15 @@ arr4.addEventListener('click',rightArray);
 
 arr1.addEventListener('click',leftArray);
 
+
 ExperienceButton.addEventListener('click',ExperienceScreenOpener);
 ExperienceHeaderButton.addEventListener('click',ExperienceScreenOpener);
+ExperienceHeaderButton2.addEventListener('click',ExperienceScreenOpener);
 
 
 EducationButton.addEventListener('click',EducationScreenOpener);
 EducationHeaderButton.addEventListener('click',EducationScreenOpener);
+EducationHeaderButton2.addEventListener('click',EducationScreenOpener);
 
 
 let jsSkill=document.getElementById("JS");
